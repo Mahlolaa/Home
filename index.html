@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>mahlola | Technical Support</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Navbar */
+.navbar {
+  background: #111;
+  color: #fff;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: bold;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Hero Section */
+.hero {
+  background: url("https://images.unsplash.com/photo-1544197150-b99a580bb7a8") no-repeat center/cover;
+  height: 90vh;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 90vh;
+  background: rgba(0,0,0,0.45);
+  top: 0;
+  left: 0;
+}
+
+.hero div {
+  position: relative;
+  z-index: 2;
+}
+
+.hero h1 {
+  font-size: 48px;
+  animation: fadeInDown 1.5s ease;
+}
+
+.hero p {
+  animation: fadeInUp 2s ease;
+}
+
+.btn {
+  background: #25D366;
+  color: white;
+  padding: 15px 25px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 18px;
+  animation: fadeInUp 2.5s ease;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+.section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+</style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<div class="navbar">
+  <div class="logo">⚙️ mahlola</div>
+  <div>
+    <a href="#home">Home</a>
+    <a href="https://calendar.app.google/MarC4AnYjB5Z1HPn6" target="_blank">Book a Session</a>
+    <a href="#" onclick="switchLang()">عربي</a>
+  </div>
+</div>
+
+<!-- Hero -->
+<div class="hero" id="home">
+  <div>
+    <h1 id="title">Professional Technical Support</h1>
+    <p id="subtitle">Fast remote troubleshooting for businesses & individuals</p>
+    <br>
+    <a class="btn" href="https://calendar.app.google/MarC4AnYjB5Z1HPn6" target="_blank" id="bookBtn">
+      Book Your Free Session
+    </a>
+  </div>
+</div>
+
+<!-- About -->
+<div class="section">
+  <h2 id="aboutTitle">Why Choose mahlola?</h2>
+  <p id="aboutText">
+    We help companies and individuals solve IT issues remotely, including networks, devices,
+    servers, and software problems.
+  </p>
+</div>
+
+<script>
+let isArabic = false;
+
+// Switch language
+function switchLang() {
+  isArabic = !isArabic;
+
+  if (isArabic) {
+    document.getElementById("title").innerText = "دعم فني احترافي";
+    document.getElementById("subtitle").innerText = "حل مشاكل الكمبيوتر والشبكات عن بُعد بسرعة";
+    document.getElementById("bookBtn").innerText = "احجز جلستك المجانية";
+    document.getElementById("aboutTitle").innerText = "لماذا تختار محلولة؟";
+    document.getElementById("aboutText").innerText =
+      "نساعد الشركات والأفراد في حل مشاكل تقنية المعلومات عن بُعد مثل الشبكات والأجهزة والسيرفرات.";
+  } else {
+    document.getElementById("title").innerText = "Professional Technical Support";
+    document.getElementById("subtitle").innerText = "Fast remote troubleshooting for businesses & individuals";
+    document.getElementById("bookBtn").innerText = "Book Your Free Session";
+    document.getElementById("aboutTitle").innerText = "Why Choose mahlola?";
+    document.getElementById("aboutText").innerText =
+      "We help companies and individuals solve IT issues remotely, including networks, devices, servers, and software problems.";
+  }
+}
+</script>
+
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/699d4c0ff444f51c37403ae7/1ji77275n';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+
+</body>
+</html>
